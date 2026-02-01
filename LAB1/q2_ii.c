@@ -5,6 +5,9 @@
 int main()
 {
     int N = 1024;
+
+    omp_set_num_threads(8);
+
     int total_threads = omp_get_max_threads();
     double **X = malloc(N * sizeof(double *));
     double **Y = malloc(N * sizeof(double *));
